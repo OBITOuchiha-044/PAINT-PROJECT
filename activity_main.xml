@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen"
+    tools:context=".MainActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_bg"
+        android:orientation="horizontal"
+        android:gravity ="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.998">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAINT APP"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:textColor="@color/purple_200"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+        <ImageButton
+            android:id="@+id/colors"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/color"
+            android:background="@drawable/color_bg"
+            android:padding="30dp"
+            app:layout_constraintBottom_toTopOf="@+id/blue"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            app:layout_constraintEnd_toStartOf="@id/white"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/blue"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/color"
+            android:background="@drawable/blue"
+            android:padding="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toStartOf="@+id/green"
+            app:layout_constraintStart_toStartOf="@+id/toolbar"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/green"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/color"
+            android:background="@drawable/green"
+            android:padding="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toStartOf="@+id/brown"
+            app:layout_constraintStart_toEndOf="@+id/blue"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/brown"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/color"
+            android:background="@drawable/grey"
+            android:padding="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toStartOf="@+id/yellow"
+            app:layout_constraintStart_toEndOf="@+id/green"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+
+
+        <ImageButton
+            android:id="@+id/yellow"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:contentDescription="@string/color"
+            android:background="@drawable/yellow"
+            android:padding="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toStartOf="@+id/eraser"
+            app:layout_constraintStart_toEndOf="@+id/brown"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/white"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/white"
+            android:padding="40dp"
+            android:contentDescription="@string/eraser"
+            app:layout_constraintBottom_toTopOf="@+id/green"
+            app:layout_constraintStart_toEndOf="@+id/colors"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:layout_constraintEnd_toStartOf="@id/violet"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/violet"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/black"
+            android:padding="40dp"
+            android:contentDescription="@string/eraser"
+            app:layout_constraintBottom_toTopOf="@+id/brown"
+            app:layout_constraintStart_toEndOf="@+id/white"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:layout_constraintEnd_toStartOf="@id/pink"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+        <ImageButton
+            android:id="@+id/pink"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/pink"
+            android:padding="40dp"
+            android:contentDescription="@string/eraser"
+            app:layout_constraintBottom_toTopOf="@+id/yellow"
+            app:layout_constraintStart_toEndOf="@+id/violet"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:layout_constraintEnd_toStartOf="@id/cyan"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/cyan"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:layout_marginStart="84dp"
+            android:background="@drawable/cyan"
+            android:contentDescription="@string/eraser"
+            android:padding="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/eraser"
+            app:layout_constraintStart_toEndOf="@+id/pink"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintVertical_bias="0.525"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+
+        <ImageButton
+            android:id="@+id/eraser"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:background="@drawable/eraser_bg"
+            android:text ="UNDO"
+            android:textColor ="@color/blue"
+            android:padding="40dp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintStart_toEndOf="@+id/yellow"
+            app:layout_constraintTop_toTopOf="@id/toolbar"
+            app:layout_constraintVertical_bias="0.982"
+            tools:ignore="SpeakableTextPresentCheck">
+
+        </ImageButton>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UNDO"
+            android:textSize="15dp"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/toolbar"
+            app:layout_constraintStart_toStartOf="@id/eraser"
+            app:layout_constraintBottom_toBottomOf="@id/toolbar"
+
+            app:layout_constraintTop_toBottomOf="@id/eraser">
+
+        </TextView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/toolbar"
+        android:layout_marginBottom="160dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/paint_view" />
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
